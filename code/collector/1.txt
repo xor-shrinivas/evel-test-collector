@@ -1,0 +1,996 @@
+Logfile: collector.log
+Verbose mode on
+Registering for GET at /vendor_event_listener/eventListener/v5/example_vnf
+Registering for POST at /vendor_event_listener/eventListener/v5/example_vnf
+Registering for GET at /vendor_event_listener/eventListener/v5/clientThrottlingState
+Registering for POST at /vendor_event_listener/eventListener/v5/clientThrottlingState
+Registering for POST at /testControl/v5/commandList
+Registering for GET at /testControl/v5/commandList
+Serving on port 30000...
+============================
+==== TEST CONTROL INPUT ====
+Valid JSON body (no schema checking) decoded:
+{
+    "commandList": [
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "fault"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "measurementsForVfScaling"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "mobileFlow"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "serviceEvents"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "signaling"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "stateChange"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "syslog"
+                }
+            }
+        }
+    ]
+}
+===== TEST CONTROL END =====
+============================
+==== Fri Jun  2 02:48:57 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "heartbeat",
+            "eventId": "1",
+            "eventName": "Heartbeat",
+            "eventType": "Autonomous heartbeat",
+            "lastEpochMicrosec": 1496396937631854,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 1,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396937631854,
+            "version": 1.2
+        }
+    }
+}
+Authenticated OK
+
+================================================================================
+Sending pending commandList in the response:
+{
+    "commandList": [
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "fault"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "measurementsForVfScaling"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "mobileFlow"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "serviceEvents"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "signaling"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "stateChange"
+                }
+            }
+        },
+        {
+            "command": {
+                "commandType": "throttlingSpecification",
+                "eventDomainThrottleSpecification": {
+                    "eventDomain": "syslog"
+                }
+            }
+        }
+    ]
+}
+================================================================================
+
+==== Fri Jun  2 02:48:57 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "fault",
+            "eventId": "2",
+            "eventName": "Fault",
+            "lastEpochMicrosec": 1496396937634833,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 2,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396937634833,
+            "version": 1.2
+        },
+        "faultFields": {
+            "alarmCondition": "An alarm condition",
+            "eventSeverity": "MAJOR",
+            "eventSourceType": "virtualMachine",
+            "faultFieldsVersion": 2.1,
+            "specificProblem": "Things are broken",
+            "vfStatus": "Ready to terminate"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:57 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "fault",
+            "eventId": "3",
+            "eventName": "Fault",
+            "eventType": "Bad things happening",
+            "lastEpochMicrosec": 1496396937638045,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 3,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396937638045,
+            "version": 1.2
+        },
+        "faultFields": {
+            "alarmCondition": "Another alarm condition",
+            "alarmInterfaceA": "An Interface Card",
+            "eventCategory": "Failed category",
+            "eventSeverity": "MAJOR",
+            "eventSourceType": "port",
+            "faultFieldsVersion": 2.1,
+            "specificProblem": "It broke badly",
+            "vfStatus": "Requesting termination"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:57 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "fault",
+            "eventId": "4",
+            "eventName": "Fault",
+            "eventType": "Bad things happen...",
+            "lastEpochMicrosec": 1496396937638143,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 4,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396937638143,
+            "version": 1.2
+        },
+        "faultFields": {
+            "alarmAdditionalInformation": [
+                {
+                    "name": "name1",
+                    "value": "value1"
+                },
+                {
+                    "name": "name2",
+                    "value": "value2"
+                }
+            ],
+            "alarmCondition": "My alarm condition",
+            "alarmInterfaceA": "My Interface Card",
+            "eventSeverity": "MAJOR",
+            "eventSourceType": "host",
+            "faultFieldsVersion": 2.1,
+            "specificProblem": "It broke very badly",
+            "vfStatus": "Preparing to terminate"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "measurementsForVfScaling",
+            "eventId": "5",
+            "eventName": "vnfScalingMeasurement",
+            "eventType": "Perf management...",
+            "lastEpochMicrosec": 1496396938186556,
+            "priority": "Normal",
+            "reportingEntityId": "measurer_id",
+            "reportingEntityName": "measurer",
+            "sequence": 5,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396934592530,
+            "version": 1.2
+        },
+        "measurementsForVfScalingFields": {
+            "additionalFields": [
+                {
+                    "name": "name1",
+                    "value": "value1"
+                },
+                {
+                    "name": "name2",
+                    "value": "value2"
+                }
+            ],
+            "additionalMeasurements": [
+                {
+                    "measurements": [
+                        {
+                            "name": "Name1",
+                            "value": "Value1"
+                        }
+                    ],
+                    "name": "Group1"
+                },
+                {
+                    "measurements": [
+                        {
+                            "name": "Name1",
+                            "value": "Value1"
+                        },
+                        {
+                            "name": "Name2",
+                            "value": "Value2"
+                        }
+                    ],
+                    "name": "Group2"
+                }
+            ],
+            "codecUsageArray": [
+                {
+                    "codecIdentifier": "G711a",
+                    "numberInUse": 91
+                },
+                {
+                    "codecIdentifier": "G729ab",
+                    "numberInUse": 92
+                }
+            ],
+            "concurrentSessions": 1,
+            "configuredEntities": 2,
+            "cpuUsageArray": [
+                {
+                    "cpuIdentifier": "cpu1",
+                    "cpuIdle": 40.0,
+                    "cpuUsageInterrupt": 0.0,
+                    "cpuUsageNice": 0.0,
+                    "cpuUsageSoftIrq": 0.0,
+                    "cpuUsageSteal": 0.0,
+                    "cpuUsageSystem": 40.0,
+                    "cpuUsageUser": 0.0,
+                    "cpuWait": 0.0,
+                    "percentUsage": 0.0
+                }
+            ],
+            "diskUsageArray": [
+                {
+                    "diskIdentifier": "sda",
+                    "diskIoTimeAvg": 0.0,
+                    "diskIoTimeLast": 0.0,
+                    "diskIoTimeMax": 0.0,
+                    "diskIoTimeMin": 0.0,
+                    "diskMergedReadAvg": 40.0,
+                    "diskMergedReadLast": 0.0,
+                    "diskMergedReadMax": 0.0,
+                    "diskMergedReadMin": 0.0,
+                    "diskMergedWriteLast": 0.0,
+                    "diskMergedWriteMax": 40.0,
+                    "diskMergedWriteMin": 0.0,
+                    "diskOctetsReadAvg": 0.0,
+                    "diskOctetsReadLast": 0.0
+                }
+            ],
+            "errors": {
+                "receiveDiscards": 1,
+                "receiveErrors": 0,
+                "transmitDiscards": 2,
+                "transmitErrors": 1
+            },
+            "featureUsageArray": [
+                {
+                    "featureIdentifier": "FeatureA",
+                    "featureUtilization": 123
+                },
+                {
+                    "featureIdentifier": "FeatureB",
+                    "featureUtilization": 567
+                }
+            ],
+            "filesystemUsageArray": [
+                {
+                    "blockConfigured": 100.11,
+                    "blockIops": 33,
+                    "blockUsed": 100.22,
+                    "ephemeralConfigured": 100.11,
+                    "ephemeralIops": 44,
+                    "ephemeralUsed": 200.22,
+                    "filesystemName": "00-11-22"
+                },
+                {
+                    "blockConfigured": 300.11,
+                    "blockIops": 55,
+                    "blockUsed": 300.22,
+                    "ephemeralConfigured": 300.11,
+                    "ephemeralIops": 66,
+                    "ephemeralUsed": 400.22,
+                    "filesystemName": "33-44-55"
+                }
+            ],
+            "latencyDistribution": [
+                {
+                    "countsInTheBucket": 20,
+                    "highEndOfLatencyBucket": 10.0,
+                    "lowEndOfLatencyBucket": 0.0
+                },
+                {
+                    "countsInTheBucket": 30,
+                    "highEndOfLatencyBucket": 20.0,
+                    "lowEndOfLatencyBucket": 10.0
+                }
+            ],
+            "meanRequestLatency": 4.4,
+            "measurementInterval": 3,
+            "measurementsForVfScalingVersion": 2.1,
+            "memoryUsageArray": [
+                {
+                    "memoryBuffered": 21092.0,
+                    "memoryCached": 315220.0,
+                    "memoryConfigured": 1651232.0,
+                    "memoryFree": 112716.0,
+                    "memorySlabRecl": 62716.0,
+                    "memorySlabUnrecl": 63432.0,
+                    "memoryUsed": 1076056.0,
+                    "vmIdentifier": "RAM"
+                }
+            ],
+            "numberOfMediaPortsInUse": 1234,
+            "requestRate": 6,
+            "vNicUsageArray": [
+                {
+                    "receivedBroadcastPacketsAccumulated": 1000000.023,
+                    "receivedBroadcastPacketsDelta": 1234.767346,
+                    "receivedDiscardedPacketsAccumulated": 127146784.234739,
+                    "receivedDiscardedPacketsDelta": 123445.0,
+                    "receivedErrorPacketsAccumulated": 2736448376.0,
+                    "receivedErrorPacketsDelta": 3474438764.0,
+                    "receivedMulticastPacketsAccumulated": 42464676.0,
+                    "receivedMulticastPacketsDelta": 42678657654.0,
+                    "receivedOctetsAccumulated": 47658745.0,
+                    "receivedOctetsDelta": 47656465465.0,
+                    "receivedTotalPacketsAccumulated": 4765764654444.0,
+                    "receivedTotalPacketsDelta": 4545665656.0,
+                    "receivedUnicastPacketsAccumulated": 4765745546.0,
+                    "receivedUnicastPacketsDelta": 4768765.783479,
+                    "transmittedBroadcastPacketsAccumulated": 747665.347647,
+                    "transmittedBroadcastPacketsDelta": 3468765.4774,
+                    "transmittedDiscardedPacketsAccumulated": 53625345.53,
+                    "transmittedDiscardedPacketsDelta": 5465345.72455,
+                    "transmittedErrorPacketsAccumulated": 7632754.754,
+                    "transmittedErrorPacketsDelta": 34646875444.0,
+                    "transmittedMulticastPacketsAccumulated": 2734875.5534,
+                    "transmittedMulticastPacketsDelta": 562346534.654,
+                    "transmittedOctetsAccumulated": 2785845.76874,
+                    "transmittedOctetsDelta": 76532645.75,
+                    "transmittedTotalPacketsAccumulated": 652365.5435,
+                    "transmittedTotalPacketsDelta": 754354.456,
+                    "transmittedUnicastPacketsAccumulated": 754354.456,
+                    "transmittedUnicastPacketsDelta": 763274.0,
+                    "vNicIdentifier": "eth0",
+                    "valuesAreSuspect": "true"
+                },
+                {
+                    "receivedMulticastPacketsDelta": 42678657654.0,
+                    "receivedOctetsAccumulated": 47658745.0,
+                    "receivedOctetsDelta": 47656465465.0,
+                    "receivedTotalPacketsAccumulated": 4765764654444.0,
+                    "receivedTotalPacketsDelta": 4545665656.0,
+                    "receivedUnicastPacketsAccumulated": 4765745546.0,
+                    "receivedUnicastPacketsDelta": 4768765.783479,
+                    "transmittedBroadcastPacketsAccumulated": 747665.347647,
+                    "transmittedBroadcastPacketsDelta": 3468765.4774,
+                    "transmittedDiscardedPacketsAccumulated": 53625345.53,
+                    "vNicIdentifier": "eth1",
+                    "valuesAreSuspect": "false"
+                }
+            ],
+            "vnfcScalingMetric": 1234
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "mobileFlow",
+            "eventId": "6",
+            "eventName": "MobileFlow",
+            "lastEpochMicrosec": 1496396938188895,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 6,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938188895,
+            "version": 1.2
+        },
+        "mobileFlowFields": {
+            "flowDirection": "Outbound",
+            "gtpPerFlowMetrics": {
+                "avgBitErrorRate": 12.3,
+                "avgPacketDelayVariation": 3.12,
+                "avgPacketLatency": 100,
+                "avgReceiveThroughput": 2100,
+                "avgTransmitThroughput": 500,
+                "flowActivationEpoch": 1470409421,
+                "flowActivationMicrosec": 987,
+                "flowDeactivationEpoch": 1470409431,
+                "flowDeactivationMicrosec": 11,
+                "flowDeactivationTime": "Fri, 05 Aug 2016 08:03:51 -0700",
+                "flowStatus": "Working",
+                "maxPacketDelayVariation": 87,
+                "numActivationFailures": 3,
+                "numBitErrors": 17,
+                "numBytesReceived": 123654,
+                "numBytesTransmitted": 4561,
+                "numDroppedPackets": 0,
+                "numL7BytesReceived": 12,
+                "numL7BytesTransmitted": 10,
+                "numLostPackets": 1,
+                "numOutOfOrderPackets": 3,
+                "numPacketErrors": 7,
+                "numPacketsReceivedExclRetrans": 899,
+                "numPacketsReceivedInclRetrans": 901,
+                "numPacketsTransmittedInclRetrans": 302,
+                "numRetries": 6,
+                "numTimeouts": 2,
+                "numTunneledL7BytesReceived": 0,
+                "roundTripTime": 110,
+                "timeToFirstByte": 225
+            },
+            "ipProtocolType": "TCP",
+            "ipVersion": "IPv4",
+            "mobileFlowFieldsVersion": 1.2,
+            "otherEndpointIpAddress": "2.3.4.1",
+            "otherEndpointPort": 2341,
+            "reportingEndpointIpAddr": "4.2.3.1",
+            "reportingEndpointPort": 4321
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "mobileFlow",
+            "eventId": "7",
+            "eventName": "MobileFlow",
+            "lastEpochMicrosec": 1496396938189033,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 7,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938189033,
+            "version": 1.2
+        },
+        "mobileFlowFields": {
+            "appProtocolType": "GSM",
+            "appProtocolVersion": "1",
+            "applicationType": "Demo application",
+            "cid": "65535",
+            "connectionType": "S1-U",
+            "ecgi": "e65535",
+            "flowDirection": "Inbound",
+            "gtpPerFlowMetrics": {
+                "avgBitErrorRate": 132.0001,
+                "avgPacketDelayVariation": 31.2,
+                "avgPacketLatency": 101,
+                "avgReceiveThroughput": 2101,
+                "avgTransmitThroughput": 501,
+                "flowActivationEpoch": 1470409422,
+                "flowActivationMicrosec": 988,
+                "flowDeactivationEpoch": 1470409432,
+                "flowDeactivationMicrosec": 12,
+                "flowDeactivationTime": "Fri, 05 Aug 2016 08:03:52 -0700",
+                "flowStatus": "Inactive",
+                "maxPacketDelayVariation": 88,
+                "numActivationFailures": 4,
+                "numBitErrors": 18,
+                "numBytesReceived": 123655,
+                "numBytesTransmitted": 4562,
+                "numDroppedPackets": 1,
+                "numL7BytesReceived": 13,
+                "numL7BytesTransmitted": 11,
+                "numLostPackets": 2,
+                "numOutOfOrderPackets": 4,
+                "numPacketErrors": 8,
+                "numPacketsReceivedExclRetrans": 900,
+                "numPacketsReceivedInclRetrans": 902,
+                "numPacketsTransmittedInclRetrans": 303,
+                "numRetries": 7,
+                "numTimeouts": 3,
+                "numTunneledL7BytesReceived": 1,
+                "roundTripTime": 111,
+                "timeToFirstByte": 226
+            },
+            "gtpProtocolType": "GTP-U",
+            "gtpVersion": "1",
+            "httpHeader": "http://www.something.com",
+            "imei": "209917614823",
+            "imsi": "355251/05/850925/8",
+            "ipProtocolType": "UDP",
+            "ipVersion": "IPv6",
+            "lac": "1",
+            "mcc": "410",
+            "mnc": "04",
+            "mobileFlowFieldsVersion": 1.2,
+            "msisdn": "6017123456789",
+            "otherEndpointIpAddress": "2.3.4.2",
+            "otherEndpointPort": 2342,
+            "otherFunctionalRole": "MME",
+            "rac": "514",
+            "radioAccessTechnology": "LTE",
+            "reportingEndpointIpAddr": "4.2.3.2",
+            "reportingEndpointPort": 4322,
+            "sac": "1",
+            "samplingAlgorithm": 1,
+            "tac": "2099",
+            "tunnelId": "Tunnel 1",
+            "vlanId": "15"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "mobileFlow",
+            "eventId": "8",
+            "eventName": "MobileFlow",
+            "lastEpochMicrosec": 1496396938189838,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 8,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938189838,
+            "version": 1.2
+        },
+        "mobileFlowFields": {
+            "additionalFields": [
+                {
+                    "name": "name1",
+                    "value": "value1"
+                },
+                {
+                    "name": "name2",
+                    "value": "value2"
+                },
+                {
+                    "name": "name3",
+                    "value": "value3"
+                }
+            ],
+            "appProtocolType": "GSM",
+            "appProtocolVersion": "2",
+            "applicationType": "Demo application 2",
+            "cid": "1",
+            "connectionType": "S1-U",
+            "ecgi": "e1",
+            "flowDirection": "Outbound",
+            "gtpPerFlowMetrics": {
+                "avgBitErrorRate": 12.32,
+                "avgPacketDelayVariation": 3.122,
+                "avgPacketLatency": 1002,
+                "avgReceiveThroughput": 21002,
+                "avgTransmitThroughput": 5002,
+                "durConnectionFailedStatus": 12,
+                "durTunnelFailedStatus": 13,
+                "flowActivatedBy": "Remote",
+                "flowActivationEpoch": 1470409423,
+                "flowActivationMicrosec": 9872,
+                "flowActivationTime": "Fri, 05 Aug 2016 08:03:43 -0700",
+                "flowDeactivatedBy": "Remote",
+                "flowDeactivationEpoch": 1470409433,
+                "flowDeactivationMicrosec": 112,
+                "flowDeactivationTime": "Fri, 05 Aug 2016 08:03:53 -0700",
+                "flowStatus": "Failed",
+                "gtpConnectionStatus": "Connected",
+                "gtpTunnelStatus": "Not tunneling",
+                "ipTosCountList": [
+                    [
+                        "1",
+                        13
+                    ],
+                    [
+                        "4",
+                        99
+                    ],
+                    [
+                        "17",
+                        1
+                    ]
+                ],
+                "ipTosList": [
+                    "1",
+                    "4",
+                    "17"
+                ],
+                "largePacketRtt": 80,
+                "largePacketThreshold": 600.0,
+                "maxPacketDelayVariation": 872,
+                "maxReceiveBitRate": 1357924680,
+                "maxTransmitBitRate": 235711,
+                "mobileQciCosCountList": [
+                    [
+                        "conversational",
+                        11
+                    ],
+                    [
+                        "65",
+                        122
+                    ]
+                ],
+                "mobileQciCosList": [
+                    "conversational",
+                    "65"
+                ],
+                "numActivationFailures": 32,
+                "numBitErrors": 172,
+                "numBytesReceived": 1236542,
+                "numBytesTransmitted": 45612,
+                "numDroppedPackets": 2,
+                "numGtpEchoFailures": 1,
+                "numGtpTunnelErrors": 4,
+                "numHttpErrors": 2,
+                "numL7BytesReceived": 122,
+                "numL7BytesTransmitted": 102,
+                "numLostPackets": 12,
+                "numOutOfOrderPackets": 32,
+                "numPacketErrors": 72,
+                "numPacketsReceivedExclRetrans": 8992,
+                "numPacketsReceivedInclRetrans": 9012,
+                "numPacketsTransmittedInclRetrans": 3022,
+                "numRetries": 62,
+                "numTimeouts": 22,
+                "numTunneledL7BytesReceived": 2,
+                "roundTripTime": 1102,
+                "tcpFlagCountList": [
+                    [
+                        "CWR",
+                        10
+                    ],
+                    [
+                        "URG",
+                        121
+                    ]
+                ],
+                "tcpFlagList": [
+                    "CWR",
+                    "URG"
+                ],
+                "timeToFirstByte": 2252
+            },
+            "gtpProtocolType": "GTP-U",
+            "gtpVersion": "1",
+            "httpHeader": "http://www.google.com",
+            "imei": "209917614823",
+            "imsi": "355251/05/850925/8",
+            "ipProtocolType": "RTP",
+            "ipVersion": "IPv8",
+            "lac": "1",
+            "mcc": "410",
+            "mnc": "04",
+            "mobileFlowFieldsVersion": 1.2,
+            "msisdn": "6017123456789",
+            "otherEndpointIpAddress": "2.3.4.3",
+            "otherEndpointPort": 2343,
+            "otherFunctionalRole": "MMF",
+            "rac": "514",
+            "radioAccessTechnology": "3G",
+            "reportingEndpointIpAddr": "4.2.3.3",
+            "reportingEndpointPort": 4323,
+            "sac": "1",
+            "samplingAlgorithm": 2,
+            "tac": "2099",
+            "tunnelId": "Tunnel 2",
+            "vlanId": "4096"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "heartbeat",
+            "eventId": "9",
+            "eventName": "HeartbeatFields",
+            "lastEpochMicrosec": 1496396938193769,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 9,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938193769,
+            "version": 1.2
+        },
+        "heartbeatField": {
+            "additionalFields": [
+                {
+                    "name": "Name1",
+                    "value": "Value1"
+                },
+                {
+                    "name": "Name2",
+                    "value": "Value2"
+                }
+            ],
+            "heartbeatFieldsVersion": 1.1,
+            "heartbeatInterval": 10
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "sipSignaling",
+            "eventId": "10",
+            "eventName": "SipSignaling",
+            "eventType": "Signaling",
+            "lastEpochMicrosec": 1496396938194404,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 10,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938194404,
+            "version": 1.2
+        },
+        "signalingFields": {
+            "additionalInformation": [
+                {
+                    "name": "name1",
+                    "value": "value1"
+                },
+                {
+                    "name": "name2",
+                    "value": "value2"
+                }
+            ],
+            "compressedSip": "compressed_sip",
+            "correlator": "correlator",
+            "localIpAddress": "1.0.3.1",
+            "localPort": "1234",
+            "remoteIpAddress": "192.168.1.3",
+            "remotePort": "3456",
+            "signalingFieldsVersion": 2.1,
+            "summarySip": "summary_sip",
+            "vendorVnfNamedFields": {
+                "vendorName": "vendor_x",
+                "vfModuleName": "vendor_x_module",
+                "vnfName": "vendor_x_vnf"
+            }
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "stateChange",
+            "eventId": "11",
+            "eventName": "StateChange",
+            "eventType": "State Change",
+            "lastEpochMicrosec": 1496396938199631,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 11,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938199631,
+            "version": 1.2
+        },
+        "stateChangeFields": {
+            "additionalFields": [
+                {
+                    "name": "Name1",
+                    "value": "Value1"
+                },
+                {
+                    "name": "Name2",
+                    "value": "Value2"
+                }
+            ],
+            "newState": "inService",
+            "oldState": "outOfService",
+            "stateChangeFieldsVersion": 1.2,
+            "stateInterface": "Interface"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "syslog",
+            "eventId": "12",
+            "eventName": "Syslog",
+            "lastEpochMicrosec": 1496396938199943,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 12,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938199943,
+            "version": 1.2
+        },
+        "syslogFields": {
+            "eventSourceType": "virtualNetworkFunction",
+            "syslogFieldsVersion": 1.2,
+            "syslogMsg": "EVEL library message",
+            "syslogTag": "EVEL"
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "syslog",
+            "eventId": "13",
+            "eventName": "Syslog",
+            "lastEpochMicrosec": 1496396938200228,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 13,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938200228,
+            "version": 1.2
+        },
+        "syslogFields": {
+            "additionalFields": "Name1=Value1|Name2=Value2|Name3=Value3",
+            "eventSourceHost": "Virtual host",
+            "eventSourceType": "virtualMachine",
+            "syslogFacility": 16,
+            "syslogFieldsVersion": 1.2,
+            "syslogMsg": "EVEL library message",
+            "syslogProc": "vnf_process",
+            "syslogProcId": 1423,
+            "syslogSdId": "u354@876876",
+            "syslogSev": "Error",
+            "syslogTag": "EVEL",
+            "syslogVer": 1
+        }
+    }
+}
+Authenticated OK
+==== Fri Jun  2 02:48:58 2017 =================================================
+Valid JSON body (no schema checking) decoded:
+{
+    "event": {
+        "commonEventHeader": {
+            "domain": "other",
+            "eventId": "14",
+            "eventName": "OtherEvent",
+            "lastEpochMicrosec": 1496396938200509,
+            "priority": "Normal",
+            "reportingEntityId": "Dummy VM UUID - No Metadata available",
+            "reportingEntityName": "Dummy VM name - No Metadata available",
+            "sequence": 14,
+            "sourceId": "Dummy VM UUID - No Metadata available",
+            "sourceName": "Dummy VM name - No Metadata available",
+            "startEpochMicrosec": 1496396938200509,
+            "version": 1.2
+        },
+        "otherFields": {
+            "nameValuePairs": [],
+            "otherFieldsVersion": 1.1
+        }
+    }
+}
+Authenticated OK
